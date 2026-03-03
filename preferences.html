@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+     <style type="text/tailwindcss">
+        @custom-variant dark (&:where(.dark, .dark *));
+    </style>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap");
+    </style>
+    <title>Préférences</title>
+   
+  </head>
+
+<body class="bg-[#FDF6EC] dark:bg-[#6B3F2A] font-[Hi_Melody] text-[#6B3F2A] dark:text-[#FDF6EC] m-0" >
+    <nav class="flex items-center justify-between mt-10 ml-5 mr-5">
+        <img class="h-[10vh] logoThemeClair"  src="enilogopng.png" />
+        <img class="h-[10vh] logoThemeSombre" src="enilogopngthemesombre.png" />
+      <h1 class="border-b text-7xl mt-5">Promo EDWM2602FT</h1>
+      <div class="flex-wrap flex flex-row gap-10 text-3xl">
+        <a
+          href="index.html"
+          class="hover:bg-[#F9E2C3] hover:dark:bg-[#97583B]  border shadow-lg rounded-md h-[2vh] w-[12vh] p-6 flex items-center justify-center"
+          >Accueil</a
+        >
+        <a
+          href="preferences.html"
+          class="hover:bg-[#F9E2C3] hover:dark:bg-[#97583B] border shadow-lg rounded-md h-[2vh] w-[12vh] p-6 flex items-center justify-center"
+          >Préférences</a
+        >
+        <a
+          href="map.html"
+          class="hover:bg-[#F9E2C3] hover:dark:bg-[#97583B]  border shadow-lg rounded-md h-[2vh] w-[12vh] p-6 flex items-center justify-center"
+          >Carte</a
+        >
+        <a
+          href="info.html"
+          class="hover:bg-[#F9E2C3] hover:dark:bg-[#97583B]  border shadow-lg rounded-md h-[2vh] w-[12vh] p-6 flex items-center justify-center"
+          >Informations</a
+        >
+      </div>
+    </nav>
+    <main>
+      <div class="flex justify-center text-6xl mt-20">Préférences du site</div>
+        <div class="flex justify-center text-3xl mt-20 gap-10">
+        <div class="border-b">Thème du site</div>
+        <label for="theme">
+          <select class="rounded-lg" name="theme" id="theme">
+            <option value="clair">Clair</option>
+            <option value="sombre">Sombre</option>
+          </select>
+        </label>
+      </div>
+      <div class="flex justify-center text-3xl mt-20 gap-10">
+        <div class="border-b">
+          Format d'affichage de la liste des apprenants
+        </div>
+        <fieldset>
+          <legend>
+            <input
+              class="appearance-none w-4 h-4 border-2 border-[#6B3F2A] rounded-full dark:border-[#FDF6EC] dark:checked:bg-[#FDF6EC] dark:checked:border-[#FDF6EC] checked:bg-[#6B3F2A] checked:border-[#6B3F2A] cursor-pointer"
+              type="radio"
+              name="affichage"
+              value="liste"
+              id="liste"
+              checked
+            />
+            <label for="liste" >Liste (Table)</label>
+            <input
+              class="appearance-none w-4 h-4 border-2 border-[#6B3F2A] rounded-full dark:border-[#FDF6EC] dark:checked:bg-[#FDF6EC] dark:checked:border-[#FDF6EC] checked:bg-[#6B3F2A] checked:border-[#6B3F2A] cursor-pointer"
+              type="radio"
+              name="affichage"
+              value="cartes"
+              id="cartes"
+            />
+            <label for="cartes">Cartes (Grid)</label>
+          </legend>
+        </fieldset>
+      </div>
+      <footer class="mt-25 gap-10 flex text-4xl items-center justify-center">
+        <a
+          href="index.html"
+          class="hover:bg-[#F9E2C3] hover:dark:bg-[#97583B]  border shadow-lg rounded-md flex items-center justify-center w-1/6 h-16 px-6"
+          >Retour à la page d'Accueil</a
+        >
+       <button id="btnSauvegarder" class="cursor-pointer hover:bg-[#F9E2C3] hover:dark:bg-[#97583B] border shadow-lg rounded-md flex items-center justify-center w-1/6 h-16 px-6">
+    Enregistrer
+    </button>
+      </footer>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

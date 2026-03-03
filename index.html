@@ -4,34 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+       <style type="text/tailwindcss">
+        @custom-variant dark (&:where(.dark, .dark *));
+    </style>
     <style>
 @import url('https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap');
 </style>
 
     <title>PromoENI- Accueil</title>
+    
 </head>
-<body class="bg-[#FDF6EC] font-[Hi_Melody] text-[#6B3F2A] m-0" >
-    <nav class="flex items-center  justify-between mt-10 ml-5 mr-5" >
-        <img class="h-[10vh]" src="enilogopng.png">
-        <h1 class="border-b text-7xl mt-5">Promo EDWM2602FT </h1>
-        <div class=" flex-wrap flex flex-row gap-10 text-3xl">
-            <a href="index.html" class="hover:bg-[#F9E2C3] border shadow-lg rounded-md h-[2vh] w-[12vh] p-6 flex items-center justify-center">Accueil</a>
-            <a href="preferences.html" class="hover:bg-[#F9E2C3] border shadow-lg rounded-md h-[2vh] w-[12vh] p-6 flex items-center justify-center">Préférences</a>
-            <a href="map.html" class="hover:bg-[#F9E2C3] border shadow-lg rounded-md h-[2vh] w-[12vh] p-6 flex items-center justify-center">Carte</a>
-            <a href="info.html" class="hover:bg-[#F9E2C3] border shadow-lg rounded-md h-[2vh] w-[12vh] p-6 flex items-center justify-center">Informations</a>
-        </div>
+<body class="bg-[#FDF6EC] dark:bg-[#6B3F2A] font-[Hi_Melody] text-[#6B3F2A] dark:text-[#FDF6EC] m-0" >
+    <nav class="flex items-center justify-between mt-10 ml-5 mr-5">
+        <img class="h-[10vh] logoThemeClair"  src="enilogopng.png" />
+        <img class="h-[10vh] logoThemeSombre" src="enilogopngthemesombre.png" />
+      <h1 class="border-b text-7xl mt-5">Promo EDWM2602FT</h1>
+      <div class="flex-wrap flex flex-row gap-10 text-3xl">
+        <a
+          href="index.html"
+          class="hover:bg-[#F9E2C3] hover:dark:bg-[#97583B]  border shadow-lg rounded-md h-[2vh] w-[12vh] p-6 flex items-center justify-center"
+          >Accueil</a
+        >
+        <a
+          href="preferences.html"
+          class="hover:bg-[#F9E2C3] hover:dark:bg-[#97583B] border shadow-lg rounded-md h-[2vh] w-[12vh] p-6 flex items-center justify-center"
+          >Préférences</a
+        >
+        <a
+          href="map.html"
+          class="hover:bg-[#F9E2C3] hover:dark:bg-[#97583B]  border shadow-lg rounded-md h-[2vh] w-[12vh] p-6 flex items-center justify-center"
+          >Carte</a
+        >
+        <a
+          href="info.html"
+          class="hover:bg-[#F9E2C3] hover:dark:bg-[#97583B]  border shadow-lg rounded-md h-[2vh] w-[12vh] p-6 flex items-center justify-center"
+          >Informations</a
+        >
+      </div>
     </nav>
     <div class="flex justify-end gap-2 text-3xl mr-50"> Type affichage
-        <input class="accent-[#C8883F]" type="checkbox" checked id="liste" name="liste">
-        <label for="liste">Liste</label>
-        <input class="accent-[#C8883F]" type="checkbox" id="cartes" name="cartes">
-        <label for="cartes">Cartes</label>
+        <fieldset>
+          <legend>
+            <input
+              class="appearance-none w-4 h-4 border-2 border-[#6B3F2A] rounded-full dark:border-[#FDF6EC] dark:checked:bg-[#FDF6EC] dark:checked:border-[#FDF6EC] checked:bg-[#6B3F2A] checked:border-[#6B3F2A] cursor-pointer"
+              type="radio"
+              name="affichage"
+              value="liste"
+              id="liste"
+              checked
+            />
+            <label for="liste">Liste (Table)</label>
+            <input
+              class="appearance-none w-4 h-4 border-2 border-[#6B3F2A] rounded-full dark:border-[#FDF6EC] dark:checked:bg-[#FDF6EC] dark:checked:border-[#FDF6EC] checked:bg-[#6B3F2A] checked:border-[#6B3F2A] cursor-pointer"
+              type="radio"
+              name="affichage"
+              value="cartes"
+              id="cartes"
+            />
+            <label for="cartes">Cartes (Grid)</label>
+          </legend>
+        </fieldset>
     </div>
     <h2 class="ml-15 mt-15 text-4xl">Liste des apprenants</h2>
-    <div class="text-3xl ml-15">
+    <div class="prefListe text-3xl ml-15">
         <table>
             <thead class="border">
-                <tr class="flex flex-row bg-[#F9E2C3]">
+                <tr class="flex flex-row dark:bg-[#97583B] bg-[#F9E2C3]">
                     <th class="h-[2vh] w-[12vh] p-10 flex items-center justify-center border-r">Nom</th>
                     <th class=" h-[2vh] w-[12vh] p-10 flex items-center justify-center border-r">Prénom</th>
                     <th class=" h-[2vh] w-[12vh] p-10 flex items-center justify-center border-r">Ville</th>
@@ -46,5 +84,13 @@
             </thead>
         </table>
     </div>
+    <div class="prefCartes hidden gap-10 mt-15 text-3xl ml-15">
+        <div class="hover:bg-[#F9E2C3] hover:dark:bg-[#97583B] shadow-lg  p-6 w-1/6 border flex flex-col items-center">
+            <div>Prenom Nom</div>
+            <div>Ville</div>
+            <div>Détails</div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
