@@ -1,73 +1,87 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-       <style type="text/tailwindcss">
-        @custom-variant dark (&:where(.dark, .dark *));
+    <style type="text/tailwindcss">
+      @custom-variant dark (&:where(.dark, .dark *));
     </style>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap');
+      @import url("https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap");
     </style>
     <title>Informations</title>
+  </head>
 
-</head>
-
-<body class="bg-[#FDF6EC] dark:bg-[#6B3F2A] font-[Hi_Melody] text-[#6B3F2A] dark:text-[#FDF6EC] m-0" >
+  <body
+    class="bg-[#FDF6EC] dark:bg-[#6B3F2A] font-[Hi_Melody] text-[#6B3F2A] dark:text-[#FDF6EC] m-0"
+  >
     <nav class="flex items-center justify-between mt-10 ml-5 mr-5">
-        <img class="h-[10vh] logoThemeClair"  src="enilogopng.png" />
-        <img class="h-[10vh] logoThemeSombre" src="enilogopngthemesombre.png" />
+      <img class="h-[10vh] logoThemeClair" src="enilogopng.png" />
+      <img class="h-[10vh] logoThemeSombre" src="enilogopngthemesombre.png" />
       <h1 class="border-b text-7xl mt-5">Promo EDWM2602FT</h1>
       <div class="flex-wrap flex flex-row gap-10 text-3xl">
         <a
           href="index.html"
-          class="hover:bg-[#F9E2C3] hover:dark:bg-[#97583B]  border shadow-lg rounded-md h-[2vh] w-[12vh] p-6 flex items-center justify-center"
+          class="hover:bg-[#F9E2C3] hover:dark:bg-[#97583B] border shadow-lg rounded-md w-1/5 p-6 flex items-center justify-center"
           >Accueil</a
         >
         <a
           href="preferences.html"
-          class="hover:bg-[#F9E2C3] hover:dark:bg-[#97583B] border shadow-lg rounded-md h-[2vh] w-[12vh] p-6 flex items-center justify-center"
+          class="hover:bg-[#F9E2C3] hover:dark:bg-[#97583B] border shadow-lg rounded-md w-1/5 p-6 flex items-center justify-center"
           >Préférences</a
         >
         <a
           href="map.html"
-          class="hover:bg-[#F9E2C3] hover:dark:bg-[#97583B]  border shadow-lg rounded-md h-[2vh] w-[12vh] p-6 flex items-center justify-center"
+          class="hover:bg-[#F9E2C3] hover:dark:bg-[#97583B] border shadow-lg rounded-md w-1/5 p-6 flex items-center justify-center"
           >Carte</a
         >
         <a
           href="info.html"
-          class="hover:bg-[#F9E2C3] hover:dark:bg-[#97583B]  border shadow-lg rounded-md h-[2vh] w-[12vh] p-6 flex items-center justify-center"
+          class="hover:bg-[#F9E2C3] hover:dark:bg-[#97583B] border shadow-lg rounded-md w-1/5 p-6 flex items-center justify-center"
           >Informations</a
         >
       </div>
     </nav>
     <main class="mt-25 text-4xl gap-5 flex flex-col items-center">
-        <div>* Informations générales *</div>
-        <div>Formation du 02/02/2026 au 24/07/2026</div>
-        <div>Nombre d'apprenants : 19</div>
-        <div class="flex w-2xl justify-between">
-            <div>Informations</div>
-            <div>Liens utiles</div>
+      <div>* Informations générales *</div>
+      <div>Formation du 02/02/2026 au 24/07/2026</div>
+      <div>Nombre d'apprenants : 19</div>
+      <div class="flex w-2xl justify-between">
+        <div>Informations</div>
+        <div>Liens utiles</div>
+      </div>
+      <div class="flex flex-row justify-center items-stretch gap-10">
+        <div class="border w-1/4 p-6">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur
+          accusamus, quod praesentium et rerum magni porro voluptate repellat
+          quibusdam?
         </div>
-        <div class="flex flex-row justify-center items-stretch gap-10">
-            <div class="border w-1/4 p-6 ">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur accusamus, quod praesentium et rerum
-                magni porro voluptate repellat quibusdam?
-            </div>
-            <div class="border flex flex-col gap-4 w-1/4 p-6">
-                <a class="underline" href="https://tailwindcss.com/docs/installation/using-vite">Tailwind</a>
-                <a class="underline" href="https://getbootstrap.com/docs/5.3/getting-started/introduction/">Bootstrap</a>
-                <a class="underline" href="https://www.w3schools.com/">W3Schools</a>
-                <a class="underline" href="https://developer.mozilla.org/fr/">MDN Web Docs</a>
-            </div>
+        <div class="border flex flex-col gap-4 w-1/4 p-6">
+          <a
+            class="underline"
+            href="https://tailwindcss.com/docs/installation/using-vite"
+            >Tailwind</a
+          >
+          <a
+            class="underline"
+            href="https://getbootstrap.com/docs/5.3/getting-started/introduction/"
+            >Bootstrap</a
+          >
+          <a class="underline" href="https://www.w3schools.com/">W3Schools</a>
+          <a class="underline" href="https://developer.mozilla.org/fr/"
+            >MDN Web Docs</a
+          >
         </div>
+      </div>
     </main>
     <footer class="flex text-4xl items-center justify-center">
-        <a href="index.html" class="mt-16 hover:bg-[#F9E2C3] border shadow-lg rounded-md flex items-center justify-center h-16 px-6">Retour à la page d'Accueil</a>
+      <a
+        href="index.html"
+        class="mt-16 hover:bg-[#F9E2C3] border shadow-lg rounded-md flex items-center justify-center h-16 px-6"
+        >Retour à la page d'Accueil</a
+      >
     </footer>
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
