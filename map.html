@@ -10,6 +10,17 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap");
     </style>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
     <title>Carte</title>
   </head>
 
@@ -43,7 +54,19 @@
         >
       </div>
     </nav>
-    <main></main>
+    <main
+      class="items-center flex-col gap-10 mt-10 justify-center flex text-6xl"
+    >
+      <h1>Carte</h1>
+      <div class="w-[600px] h-[500px]" id="map"></div>
+    </main>
+    <footer class="flex text-4xl items-center justify-center">
+      <a
+        href="index.html"
+        class="mt-16  hover:dark:bg-[#97583B] hover:bg-[#F9E2C3] border shadow-lg rounded-md flex items-center justify-center h-16 px-6"
+        >Retour à la page d'Accueil</a
+      >
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
